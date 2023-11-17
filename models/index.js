@@ -30,7 +30,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.todos = require("./todos.js")(sequelize, DataTypes);
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
   console.log("yes re-sync done!");
 });
 
